@@ -112,10 +112,12 @@ map.data.addListener('mouseout', function(event) {
   });
 
   infoWindow = new google.maps.InfoWindow();
+
   const locationButton = document.createElement("button");
   locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  //map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  document.getElementById("locationButton").appendChild(locationButton)
   locationButton.addEventListener("click", () => {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
