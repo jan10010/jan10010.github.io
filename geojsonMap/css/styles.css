@@ -1,0 +1,89 @@
+/* Set the size of the div element that contains the map */
+#map {
+    height: 580px;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid rgb(160, 160, 160);
+    border-radius: 6px;
+
+}
+
+
+body{
+    background-color: rgb(250,250,250);
+    text-shadow: 1px;
+    font-size: large;
+}
+button{
+    float:right;
+}
+
+.search{
+    padding-top: 30px;
+}
+.locations{
+    list-style-type: disc;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+    list-style-type: disc;
+}
+
+.location{
+    float: left;
+    width: 47%;
+    margin-left: 1%;
+}
+
+
+
+
+.information{
+    margin-left: 0px;
+}
+#location{
+    margin-top: 20px;
+    background-color: rgb(240, 240, 240);
+    border: 5px;
+    border:1px solid rgb(160, 160, 160);
+    border-radius: 6px;
+}
+.locatonName{
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    border-bottom:1px solid rgb(180, 180, 180);
+    margin-bottom: 4px;
+}
+.locationInformatons{
+    
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+#searchbar{
+    width: 100%;
+}
+
+.informationName p{
+    margin-bottom: 0px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.information p{
+    margin-bottom: 0px;
+    margin-left: -3px;
+    text-align: left;
+
+}
+.locatonInformation{
+    margin-bottom: 0px;
+}
+
+#locations, .locatonInformation {
+    list-style: none;
+}

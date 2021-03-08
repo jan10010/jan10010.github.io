@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Add Map</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="./code/main.js"></script></scrip>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css">
+  </head>
+  <body>
+    <h3></h3>
+    <!--The div element for the map -->
+    <div class="container">
+        
+        <div id="map"></div>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZK8ceIgylgIA8_aiGkXVOheWnibKG-p8&map_ids=d198803c89e39e79&callback=initMap">
+        async
+        ></script>
+    </div>
+
+    <div class="container">
+        <div id="location">
+            <li class="location" style="display: none;">  style="display: none;" 
+            <p class="locatonName"></p>
+            <ul class="locationInformatons">
+                <li class="locatonInformation">
+                    <div class="row">
+                        <div class="six columns informationName"><p>tex</p></div>
+                        <div class="six columns information"><p>tox</p></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>"
+
+  </body>
+</html>
