@@ -20,4 +20,27 @@ fetch(url, settings).then(res => res.json())
     }).catch(err => console.error(err));
     
 }
+
+
+function loadData(){
+    const request = require('request');
+    const fetch = require('node-fetch');
+
+let url = "https://opendata.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0.geojson";
+
+let settings = { method: "Get" };
+
+fetch(url, settings).then(res => res.json())
+.then((out) =>{
+    const fs = require("fs");
+    var fileContent = out.features;
+    
+    let data = JSON.stringify(fileContent);
+    console.log(data)
+    fs.writeFileSync('../geojsonMap/._RKI_Corona_Landkreise.json', data);
+
+    }).catch(err => console.error(err));
+    
+}
+
 loadData()            
