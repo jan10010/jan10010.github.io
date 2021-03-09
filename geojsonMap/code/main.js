@@ -1,9 +1,15 @@
 // Initialize and add the map
 let map, infoWindow;
+var width = screen.width;
 
 function initMap() {
+  var zoomLvl = 6
+  console.log(width)
+  if(width <=400){
+    zoomLvl = 7.2
+  }
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 6,
+    zoom: zoomLvl,
     minZoom: 6,
     mapTypeControl: false,
     zoomControl: false,
