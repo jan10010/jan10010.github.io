@@ -3,7 +3,7 @@ echo "starting script"
 echo $PATH
 Now_daily = $(date +%d-%b-daily) 
 
-node ./updateData.js
+node ./code/updateData.js
 git add --all 
-gti commit -m  "Daly dataupdate ($Now_daily)"
+git commit -m  "Daly data update"
 git push origin 
