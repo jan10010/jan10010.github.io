@@ -25,7 +25,7 @@ fetch(url, settings).then(res => res.json())
 function loadDataGepjson(){
     const http = require('https'); // or 'https' for https:// URLs
     const fs = require('fs');
-    console("Starting Download of GeoJson Data")
+    console.log("Starting Download of GeoJson Data")
 
     const file = fs.createWriteStream("./geojsonMap/RKI_Corona_Landkreise.geojson");
     const request = http.get("https://opendata.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0.geojson", function(response) {
