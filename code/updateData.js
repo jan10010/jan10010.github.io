@@ -14,7 +14,7 @@ fetch(url, settings).then(res => res.json())
     var fileContent = out.features;
     
     let data = JSON.stringify(fileContent);
-    console.log(data)
+    //console.log(data)
     fs.writeFileSync('data2.json', data);
 
     }).catch(err => console.error(err));
@@ -22,25 +22,17 @@ fetch(url, settings).then(res => res.json())
 }
 
 
-function loadData(){
-    const request = require('request');
-    const fetch = require('node-fetch');
+function loadDataGepjson(){
+    const http = require('https'); // or 'https' for https:// URLs
+    const fs = require('fs');
+    console("Starting Download of GeoJson Data")
 
-let url = "https://opendata.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0.geojson";
+    const file = fs.createWriteStream("./geojsonMap/RKI_Corona_Landkreise.geojson");
+    const request = http.get("https://opendata.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0.geojson", function(response) {
+      response.pipe(file);
+    });
 
-let settings = { method: "Get" };
-
-fetch(url, settings).then(res => res.json())
-.then((out) =>{
-    const fs = require("fs");
-    var fileContent = out.features;
-    
-    let data = JSON.stringify(fileContent);
-    console.log(data)
-    fs.writeFileSync('../geojsonMap/._RKI_Corona_Landkreise.json', data);
-
-    }).catch(err => console.error(err));
-    
 }
 
-loadData()            
+loadData()         
+loadDataGepjson()   
