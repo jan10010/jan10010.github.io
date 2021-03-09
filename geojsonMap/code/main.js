@@ -6,7 +6,7 @@ function initMap() {
   var zoomLvl = 6
   console.log(width)
   if(width <=400){
-    zoomLvl = 7.2
+    zoomLvl = 8
   }
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: zoomLvl,
