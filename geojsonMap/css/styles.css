@@ -6,6 +6,10 @@ body {
   font-size: large;
 }
 
+.mycontainer {
+  margin: auto auto;
+}
+
 .locations {
   list-style-type: disc;
   -webkit-columns: 2;
@@ -24,8 +28,8 @@ body {
 }
 
 #location .locatonName {
-  font-size: large;
-  font-weight: 700;
+  font-size: xx-large;
+  font-weight: bold;
   text-align: center;
   border-bottom: 1px solid #b4b4b4;
   margin-bottom: 4px;
@@ -43,7 +47,7 @@ body {
 }
 
 #locationButton {
-  width: 80%;
+  width: 99%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,7 +71,7 @@ body {
     margin-right: auto;
     margin-top: 0%;
   }
-  #map {
+  .mycontainer #map {
     width: 100%;
     height: 80em;
     text-align: center;
@@ -76,11 +80,16 @@ body {
     border: 1px solid #a0a0a0;
     border-radius: 0px;
   }
+  .mycontainer #locationButton button {
+    font-size: xx-large;
+    margin-top: 2%;
+  }
   .containerResults {
-    width: 80%;
+    font-size: 800;
+    width: 99%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0%;
+    margin-top: 2%;
   }
   #location {
     margin-top: 5px;
@@ -97,7 +106,7 @@ body {
   }
   .informationName p {
     text-align: right;
-    font-size: medium;
+    font-size: xx-large;
     margin-bottom: 0px;
   }
   .information {
@@ -106,7 +115,7 @@ body {
   }
   .information p {
     margin-left: 3px;
-    font-size: medium;
+    font-size: xx-large;
     margin-bottom: 0%;
   }
   .locationInformatons {
@@ -117,22 +126,23 @@ body {
   }
 }
 
-@media (min-width: 500px) and (orientation: landscape), (orientation: landscape) {
+@media (min-width: 450px) and (min-aspect-ratio: 59 / 100), (orientation: landscape) {
   .mycontainer {
     width: 90%;
     margin-top: 3%;
   }
-  #map {
+  .mycontainer #map {
     height: 6in;
     width: 100%;
     border-radius: 6px;
   }
-  #locationButton {
+  .mycontainer #locationButton {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  #locationButton button {
+  .mycontainer #locationButton button {
+    font-size: large;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -142,6 +152,19 @@ body {
     border: 1px solid #a0a0a0;
     border-radius: 1%px;
   }
+  .containerResults {
+    font-size: 800;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+  }
+  .information p {
+    font-size: large;
+  }
+  .informationName p {
+    font-size: large;
+  }
 }
 
 /* Larger than Desktop HD */
@@ -149,12 +172,49 @@ body {
   .mycontainer {
     background-color: white;
     width: 80%;
-    margin-top: 3%;
+    margin-top: 0.5%;
   }
-  #map {
-    height: 6in;
+  .mycontainer #map {
+    height: 5.5in;
     width: 100%;
     border-radius: 6px;
+  }
+  .containerResults #location .locatonName {
+    font-size: x-large;
+  }
+  .containerResults .information p {
+    font-size: large;
+  }
+  .containerResults .informationName p {
+    font-size: large;
+  }
+}
+
+@media (min-width: 1400px) and (orientation: landscape) {
+  .mycontainer {
+    background-color: white;
+    width: 80%;
+    margin-top: 2%;
+  }
+  .mycontainer #map {
+    height: 10in;
+    width: 100%;
+    border-radius: 6px;
+  }
+  .containerResults {
+    font-size: 800;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+  }
+  .containerResults .informationName p {
+    text-align: right;
+    margin-bottom: 0px;
+  }
+  .containerResults .information p {
+    margin-bottom: 0%;
+    font-size: large;
   }
 }
 /*# sourceMappingURL=styles.css.map */
