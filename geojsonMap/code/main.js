@@ -5,8 +5,8 @@ var width = screen.width;
 function initMap() {
   var zoomLvl = 6
   console.log(width)
-  if(width <=400){
-    zoomLvl = 8
+  if(width <=500){
+    zoomLvl = 7.2
   }
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: zoomLvl,
@@ -162,5 +162,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     );
     infoWindow.open(map);
   }
-
-
