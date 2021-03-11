@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "starting script"
 echo $PATH
-
+cd /home/pi/Desktop/jan10010.github.io
 node ./code/updateData.js
 echo "download complite"
 cd geojsonMap
