@@ -6,6 +6,19 @@ body{
     font-size: large;
 }
 .mycontainer{
+    position: relative;
+    #listView{
+        text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 5%;
+        font-size: xx-large;
+        background-color: whitesmoke;
+        float: right;
+        position: absolute;
+        top: 2%;
+        left: 60%;
+        z-index: 9;
+    }
     margin: auto auto;
 }
 
@@ -133,7 +146,16 @@ body{
     .mycontainer{
         width: 90%;
         margin-top: 3%;
-
+        #listView{
+            width:  18%;
+            font-size: small;
+            padding: 0% 0%;
+            padding-top: 0%;
+            padding-bottom: 1%;
+            top: 1%;
+            left: 81%;
+            margin-bottom: 0%;
+        }
         #map{
             height: 6in;
             width: 100%;
@@ -159,10 +181,13 @@ body{
     }
     .containerResults{
         font-size:  800;
-        width: 80%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0%;
+        #location .locatonName{
+            font-size: large;
+        }
     }
     .information{
         p{
@@ -177,6 +202,11 @@ body{
     }
 
 }
+@media (min-width: 40px) and (min-aspect-ratio: 59 / 100), (orientation: landscape){
+    .mycontainer #map {
+    }
+}
+
 
 /* Larger than Desktop HD */
 @media (min-width: 800px) and (orientation: landscape){
@@ -185,14 +215,19 @@ body{
         width: 80%;
         margin-top: 0.5%;
 
+        #listView{
+            font-size: x-small;
+            
+        }   
         #map{
-            height: 5.5in;
+            height: 6.5in;
             width: 100%;
             border-radius: 6px;
         }
 
     }
     .containerResults{
+        width: 80%;
         #location{
             .locatonName{
                 font-size: x-large;
@@ -208,11 +243,11 @@ body{
                 font-size: large;
             }
         }
-    }
+    } 
 
 }
 
-@media (min-width: 1400px) and (orientation: landscape){
+@media (min-width: 1600px) and (orientation: landscape){
     .mycontainer {
         background-color: white;
         width: 80%;

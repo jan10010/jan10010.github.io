@@ -162,3 +162,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     );
     infoWindow.open(map);
   }
+
+function listView(){
+  window.location.replace("https://jan10010.github.io/index.html");
+}

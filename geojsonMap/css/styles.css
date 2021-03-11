@@ -7,7 +7,21 @@ body {
 }
 
 .mycontainer {
+  position: relative;
   margin: auto auto;
+}
+
+.mycontainer #listView {
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 5%;
+  font-size: xx-large;
+  background-color: whitesmoke;
+  float: right;
+  position: absolute;
+  top: 2%;
+  left: 60%;
+  z-index: 9;
 }
 
 .locations {
@@ -131,6 +145,16 @@ body {
     width: 90%;
     margin-top: 3%;
   }
+  .mycontainer #listView {
+    width: 18%;
+    font-size: small;
+    padding: 0% 0%;
+    padding-top: 0%;
+    padding-bottom: 1%;
+    top: 1%;
+    left: 81%;
+    margin-bottom: 0%;
+  }
   .mycontainer #map {
     height: 6in;
     width: 100%;
@@ -154,10 +178,13 @@ body {
   }
   .containerResults {
     font-size: 800;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0%;
+  }
+  .containerResults #location .locatonName {
+    font-size: large;
   }
   .information p {
     font-size: large;
@@ -174,10 +201,16 @@ body {
     width: 80%;
     margin-top: 0.5%;
   }
+  .mycontainer #listView {
+    font-size: x-small;
+  }
   .mycontainer #map {
-    height: 5.5in;
+    height: 6.5in;
     width: 100%;
     border-radius: 6px;
+  }
+  .containerResults {
+    width: 80%;
   }
   .containerResults #location .locatonName {
     font-size: x-large;
@@ -190,7 +223,7 @@ body {
   }
 }
 
-@media (min-width: 1400px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
   .mycontainer {
     background-color: white;
     width: 80%;

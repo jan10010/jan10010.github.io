@@ -185,3 +185,7 @@ addEventListener("load", function(){
 
 
 //createEntry("test",[["Hallo"], ["Welt"]]);
+
+function mapView(){
+    window.location.replace("https://jan10010.github.io/geojsonMap/index.html");
+}
