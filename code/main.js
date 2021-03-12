@@ -123,7 +123,6 @@ function loadJSON(callback) {
     loadJSON(function(response) {
      // Parse JSON string into object
        var data = JSON.parse(response);
-       console.log(data[0].attributes)
        var i = 0
        var listOfEntryes = []
        while(i<=data.length-1){
@@ -137,7 +136,10 @@ function loadJSON(callback) {
             ///landKreis = " (" + Landkreis
 
             landKreis = String(landKreis).replace("LK ","")
-            if(locatonType == "Kreisfreie Stadt" || landKreis.indexOf(entry.GEN) > -1 ){
+            if(entry.GEN == "Emmendingen"){
+                console.log(landKreis.indexOf(entry.GEN))
+            }
+            if(locatonType == "Kreisfreie Stadt" || landKreis.slice(0,landKreis.length -5).indexOf(entry.GEN) > -1 ){
                 locatonType = ""
                 //landKreis = " ("
             }
