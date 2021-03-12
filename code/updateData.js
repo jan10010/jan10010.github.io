@@ -15,7 +15,7 @@ fetch(url, settings).then(res => res.json())
     
     let data = JSON.stringify(fileContent);
     //console.log(data)
-    fs.writeFileSync('data2.json', data);
+    fs.writeFileSync('data.json', data);
 
     }).catch(err => console.error(err));
     
